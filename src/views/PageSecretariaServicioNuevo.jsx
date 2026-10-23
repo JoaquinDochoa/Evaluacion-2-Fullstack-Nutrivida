@@ -1,0 +1,2 @@
+import {useNavigate} from 'react-router-dom';import FormularioServicio from '../components/FormularioServicio';import {useTienda} from '../context/TiendaContext';
+export default function PageSecretariaServicioNuevo(){const {agregarProducto}=useTienda();const navegar=useNavigate();return <main className="admin-content"><h1>Nuevo servicio</h1><FormularioServicio onGuardar={d=>{agregarProducto(d);navegar('/secretaria/servicios')}}/></main>}
